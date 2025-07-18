@@ -12,6 +12,17 @@ int main(int argc, const char * argv[]) {
     return 0;
 }
 
+void attempt(char start, int offset){
+    cout << "character(" << start << ", " << offset << "): ";
+    try {
+        cout << character(start, offset);
+    }
+    catch (string& e) {
+        cout << e;
+    }
+    cout << endl;
+}
+
 
 char character(char start, int offset){
     if (!isalpha(start)){
