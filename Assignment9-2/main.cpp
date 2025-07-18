@@ -3,6 +3,7 @@
 // July 17, 2025
 
 #include <iostream>
+#include <string>
 using namespace std;
 
 char character(char, int);
@@ -31,17 +32,17 @@ void attempt(char start, int offset){
 
 char character(char start, int offset){
     if (!isalpha(start)){
-        throw "Error: Invalid Character";
+        throw string("Error: Invalid Character");
     }
     
     char result = start + offset;
     
     if (!isalpha(result)){
-        throw "Error: Invalid Range";
+        throw string("Error: Invalid Range");
     }
     
     if (isupper(start) != isupper(result)){ // if case is not the same
-        throw "Error: Case Transition";
+        throw string("Error: Case Transition");
     }
     
     return result;
