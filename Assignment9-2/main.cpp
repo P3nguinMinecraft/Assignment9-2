@@ -9,6 +9,9 @@ using namespace std;
 char character(char, int);
 void attempt(char, int);
 
+template <typename T>
+T half(T);
+
 int main(int argc, const char * argv[]) {
     attempt('a', 1);
     attempt('a', -1);
@@ -46,4 +49,14 @@ char character(char start, int offset){
     }
     
     return result;
+}
+
+template <typename T>
+T half(T value) {
+    return value / 2;
+}
+
+// int overload with rounding
+int half(int value) {
+    return static_cast<int>(round(value / 2.0));
 }
