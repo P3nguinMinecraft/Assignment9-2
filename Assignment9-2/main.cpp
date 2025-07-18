@@ -24,5 +24,9 @@ char character(char start, int offset){
         throw "Error: Invalid Range";
     }
     
+    if (isupper(start) != isupper(result)){ // if case is not the same
+        throw "Error: Case Transition";
+    }
+    
     return result;
 }
