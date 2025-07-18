@@ -6,9 +6,14 @@
 using namespace std;
 
 char character(char, int);
+void attempt(char, int);
 
 int main(int argc, const char * argv[]) {
-    
+    attempt('a', 1);
+    attempt('a', -1);
+    attempt('Z', -1);
+    attempt('?', 5);
+    attempt('A', 32);
     return 0;
 }
 
